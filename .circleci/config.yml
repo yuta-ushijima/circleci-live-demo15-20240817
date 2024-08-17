@@ -27,6 +27,9 @@ jobs:
             - "SHA256:C/2Tyc2h823YnNy9EMJfkoLmRI4b7hFIQKlf7mC2whU"
       - ansible-playbook/install:
           version: 2.10.7
+      - ansible-playbook/playbook:
+          playbook: ansible/playbook.yml
+          playbook-options: -u ec2-user -i ansible/inventory --private-key ~/.ssh/id_rsa
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
