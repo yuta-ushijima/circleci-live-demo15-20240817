@@ -43,7 +43,7 @@ jobs:
           name: execute
           command: |
             cd serverspec
-            bundle exec rspec
+            TARGET_HOST=54.249.79.236 bundle exec rspec
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
